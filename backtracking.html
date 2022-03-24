@@ -437,188 +437,96 @@ static boolean solvable(BinaryTree node) {
     <li>Jump ahead over exactly one marble of the opposite color, if the space just beyond that marble is clear.</li>
 </ul>
 <p>For example, you could make the following sequence of moves:</p>
-<table align="center" border="0" cellpadding="8" cellspacing="0">
-    <tbody>
-      <tr>
-        <td><b>Starting position:</b></td>
-        <td>
-          <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-            <tbody>
+<table border="0" align="center">
+  <tr>
+      <th>Starting position:</th>
+
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
               <tr>
-                <td width="44">
-                  <img src="./Black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./Black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">&nbsp;</td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45">&nbsp;</th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
               </tr>
-            </tbody>
           </table>
-        </td>
-    </tbody>
-</table>    
-
-      </tr>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-          <tr>
-            <td><b>Black moves ahead:</b></td>
-            <td>
-              <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-                <tbody>
-                  <tr>
-                    <td width="44">
-                      <img src="./Black-ball.gif" height="44" width="44">
-                    </td>
-                    <td width="44">
-                      &nbsp;
-                    </td>
-                    <td width="44"><img src="./black-ball.gif" height="44" width="44"></td>
-                    <td width="44">
-                      <img src="./white-ball.gif" height="44" width="44">
-                    </td>
-                    <td width="44">
-                      <img src="./white-ball.gif" height="44" width="44">
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>  
-    </table>    
-
-<table align="center" border="0" cellpadding="8" cellspacing="0">
-            <tbody>
+      </th>
+  </tr>
+  <tr>
+      <th>Black moves ahead:</th>
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
               <tr>
-                <td><b>White jumps:</b></td>
-                <td>
-                  <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-                    <tbody>
-                      <tr>
-                        <td width="44">
-                          <img src="./Black-ball.gif" height="44" width="44">
-                        </td>
-                        <td width="44">
-                          <img src="./white-ball.gif" height="44" width="44">
-                        </td>
-                        <td width="44"><img src="./black-ball.gif" height="44 " width="44" ></td>
-                        <td width="44">
-                          &nbsp;
-                        </td>
-                        <td width="44">
-                          <img src="./white-ball.gif" height="44" width="44">
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45">&nbsp;</th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
               </tr>
-            </tbody>
-</table>      
-
-<table align="center" border="0" cellpadding="8" cellspacing="0">
-    <tbody>
-      <tr>
-        <td><b>Black moves ahead:</b></td>
-        <td>
-          <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-            <tbody>
-              <tr>
-                <td width="44">
-                  <img src="./Black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">&nbsp;</td>
-                <td width="44">
-                  <img src="./black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-              </tr>
-            </tbody>
           </table>
-        </td>
-      </tr>
-    </tbody>  
-</table>
-
-<table align="center" border="0" cellpadding="8" cellspacing="0">
-    <tbody>
-      <tr>
-        <td><b>Black jumps:</b></td>
-        <td>
-          <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-            <tbody>
+      </th>
+  </tr>
+  <tr>
+      <th>White jumps:</th>
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
               <tr>
-                <td width="44">
-                  &nbsp;
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-                <td width="44"><img src="./black-ball.gif" height="44 " width="44"></td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45">&nbsp;</th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
               </tr>
-            </tbody>
           </table>
-        </td>
-      </tr>
-    </tbody>  
-</table>
-
-<table align="center" border="0" cellpadding="8" cellspacing="0">
-    <tbody>
-      <tr>
-        <td><b>White moves ahead:</b></td>
-        <td>
-          <table align="center" bgcolor="#dddddd" border="1" cellpadding="6" cellspacing="0">
-            <tbody>
+      </th>
+  </tr>
+  <tr>
+      <th>Black moves ahead:</th>
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
               <tr>
-                <td width="44">
-                  <img src="./Black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./Black-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">&nbsp;</td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
-                <td width="44">
-                  <img src="./white-ball.gif" height="44" width="44">
-                </td>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45">&nbsp;</th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
               </tr>
-            </tbody>
           </table>
-        </td>
-      </tr>
-    </tbody>  
-</table>
+      </th>
+  </tr>
+  <tr>
+      <th>Black jumps:</th>
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
+              <tr>
+                  <th width="45"></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+              </tr>
+          </table>
+      </th>
+  </tr>
+  <tr>
+      <th>White moves ahead:</th>
+      <th>
+          <table border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#D7DDDB">
+              <tr>
+                  <th width="45"></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./black-ball.gif" alt=""></th>
+                  <th width="45"><img src="./white-ball.gif" alt=""></th>
+              </tr>
+          </table>
+      </th>
+  </tr>
+  <tr>
+      <th>Stuck!</th>
+  </tr>
 
-
-
-
-</table>
-<table  border="0" align="center" cellpadding="8" cellspacing="0" >
-    <tr>
-        <td><b>Stuck!</b></td>
-    </tr>
 </table>
 <p>Now to the program. The main program will initialize the board, and call a recursive backtracking routine to attempt to solve the puzzle. The backtracking routine will either succeed and print out a winning path, or it will fail, and the main program will have to print out the bad news.</p>
 <p>The backtracking method is named <font color="brown" size="4">solvable</font> and returns a <font color="brown" size="4">boolean</font>. In <font color="brown" size="4">solvable</font> we shall need to check whether we are at a leaf, which in this case means a position from which no further moves are possible. This isn't so easy.</p>
